@@ -1,0 +1,700 @@
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\game\main.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F32FC (32-bit), Flags: CMdRe0, Thread: 0x2DD4 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416409 in E:\game\main.exe: (anonymous namespace)::TX::txBitBlt()
+# 1 0x0041C719 in E:\game\main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Dec 12 2024 18:15:53, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 12 2024 18:16:13
+
+Run file:	E:\game\main.exe
+Directory:	E:\game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\game\main.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F32FC (32-bit), Flags: CMdRe0, Thread: 0x2D9C (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416409 in E:\game\main.exe: (anonymous namespace)::TX::txBitBlt()
+# 1 0x0041C719 in E:\game\main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Dec 12 2024 18:18:40, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 12 2024 18:19:10
+
+Run file:	E:\game\main.exe
+Directory:	E:\game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\game\main.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 10859, функция: bool {anonymous}::TX::_txBuffer_Delete(HDC__**),
+
+Сообщение: Обнаружен нулевой или ложный результат.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F32FC (32-bit), Flags: CMdRE0, Thread: 0x4F4 (Canvas), GetLastError(): 6 (Неверный дескриптор). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040A685 in E:\game\main.exe: (anonymous namespace)::TX::_txBuffer_Delete()
+# 1 0x00407DCD in E:\game\main.exe: (anonymous namespace)::TX::_txCanvas_OnDESTROY()
+# 2 0x004075C8 in E:\game\main.exe: (anonymous namespace)::TX::_txCanvas_WndProc()
+# 3 0x769516AB in C:\Windows\System32\USER32.dll: AddClipboardFormatListener()
+# 4 0x76947E1A in C:\Windows\System32\USER32.dll: GetClassLongW()
+# 5 0x76947A1A in C:\Windows\System32\USER32.dll: GetClassLongW()
+# 6 0x7694BEEF in C:\Windows\System32\USER32.dll: CallNextHookEx()
+# 7 0x77EB54BD in C:\Windows\SYSTEM32\ntdll.dll: KiUserCallbackDispatcher()
+# 8 0x76933F1C in C:\Windows\System32\USER32.dll: MBToWCSEx()
+# 9 0x76933E87 in C:\Windows\System32\USER32.dll: MBToWCSEx()
+#10 0x004077B9 in E:\game\main.exe: (anonymous namespace)::TX::_txCanvas_WndProc()
+#11 0x769516AB in C:\Windows\System32\USER32.dll: AddClipboardFormatListener()
+#12 0x76947E1A in C:\Windows\System32\USER32.dll: GetClassLongW()
+#13 0x76947A1A in C:\Windows\System32\USER32.dll: GetClassLongW()
+#14 0x7694BEEF in C:\Windows\System32\USER32.dll: CallNextHookEx()
+#15 0x77EB54BD in C:\Windows\SYSTEM32\ntdll.dll: KiUserCallbackDispatcher()
+#16 0x76933F1C in C:\Windows\System32\USER32.dll: MBToWCSEx()
+#17 0x759835C5 in C:\Windows\system32\uxtheme.dll: Ordinal132()
+#18 0x7597FAE1 in C:\Windows\system32\uxtheme.dll: Ordinal45()
+#19 0x75978C18 in C:\Windows\system32\uxtheme.dll: GetThemeBackgroundRegion()
+#20 0x76933EBC in C:\Windows\System32\USER32.dll: MBToWCSEx()
+#21 0x004077B9 in E:\game\main.exe: (anonymous namespace)::TX::_txCanvas_WndProc()
+#22 0x769516AB in C:\Windows\System32\USER32.dll: AddClipboardFormatListener()
+#23 0x76947E1A in C:\Windows\System32\USER32.dll: GetClassLongW()
+#24 0x76947A1A in C:\Windows\System32\USER32.dll: GetClassLongW()
+#25 0x7694BEEF in C:\Windows\System32\USER32.dll: CallNextHookEx()
+#26 0x77EB54BD in C:\Windows\SYSTEM32\ntdll.dll: KiUserCallbackDispatcher()
+#27 0x76933F1C in C:\Windows\System32\USER32.dll: MBToWCSEx()
+#28 0x759835C5 in C:\Windows\system32\uxtheme.dll: Ordinal132()
+#29 0x7597FAE1 in C:\Windows\system32\uxtheme.dll: Ordinal45()
+#30 0x75978C18 in C:\Windows\system32\uxtheme.dll: GetThemeBackgroundRegion()
+#31 0x76933EBC in C:\Windows\System32\USER32.dll: MBToWCSEx()
+#32 0x004077B9 in E:\game\main.exe: (anonymous namespace)::TX::_txCanvas_WndProc()
+#33 0x769516AB in C:\Windows\System32\USER32.dll: AddClipboardFormatListener()
+#34 0x76947E1A in C:\Windows\System32\USER32.dll: GetClassLongW()
+#35 0x76946751 in C:\Windows\System32\USER32.dll: DispatchMessageW()
+#36 0x769384D0 in C:\Windows\System32\USER32.dll: DispatchMessageA()
+#37 0x004065BB in E:\game\main.exe: (anonymous namespace)::TX::_txCanvas_ThreadProc()
+#38 0x768B6CFF in C:\Windows\System32\msvcrt.dll: beginthreadex()
+#39 0x768B6DC1 in C:\Windows\System32\msvcrt.dll: endthreadex()
+#40 0x77BEFCC9 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+#41 0x77EA809E in C:\Windows\SYSTEM32\ntdll.dll: RtlGetAppContainerNamedObjectPath()
+#42 0x77EA806E in C:\Windows\SYSTEM32\ntdll.dll: RtlGetAppContainerNamedObjectPath()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Dec 12 2024 18:19:41, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 12 2024 18:20:10
+
+Run file:	E:\game\main.exe
+Directory:	E:\game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\game\main.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 10067, функция: bool {anonymous}::TX::_txCanvas_OnDESTROY(HWND),
+
+Сообщение: Обнаружен нулевой или ложный результат.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F32FC (32-bit), Flags: CMdrE0, Thread: 0x4F4 (Canvas). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00407D69 in E:\game\main.exe: (anonymous namespace)::TX::_txCanvas_OnDESTROY()
+# 1 0x004075C8 in E:\game\main.exe: (anonymous namespace)::TX::_txCanvas_WndProc()
+# 2 0x769516AB in C:\Windows\System32\USER32.dll: AddClipboardFormatListener()
+# 3 0x76947E1A in C:\Windows\System32\USER32.dll: GetClassLongW()
+# 4 0x76947A1A in C:\Windows\System32\USER32.dll: GetClassLongW()
+# 5 0x7694BEEF in C:\Windows\System32\USER32.dll: CallNextHookEx()
+# 6 0x77EB54BD in C:\Windows\SYSTEM32\ntdll.dll: KiUserCallbackDispatcher()
+# 7 0x00403EA8 in E:\game\main.exe: (anonymous namespace)::TX::_txCleanup()
+# 8 0x00410CAA in E:\game\main.exe: (anonymous namespace)::TX::_txProcessError()
+# 9 0x0040A90A in E:\game\main.exe: (anonymous namespace)::TX::_txError()
+#10 0x0040A685 in E:\game\main.exe: (anonymous namespace)::TX::_txBuffer_Delete()
+#11 0x00407DCD in E:\game\main.exe: (anonymous namespace)::TX::_txCanvas_OnDESTROY()
+#12 0x004075C8 in E:\game\main.exe: (anonymous namespace)::TX::_txCanvas_WndProc()
+#13 0x769516AB in C:\Windows\System32\USER32.dll: AddClipboardFormatListener()
+#14 0x76947E1A in C:\Windows\System32\USER32.dll: GetClassLongW()
+#15 0x76947A1A in C:\Windows\System32\USER32.dll: GetClassLongW()
+#16 0x7694BEEF in C:\Windows\System32\USER32.dll: CallNextHookEx()
+#17 0x77EB54BD in C:\Windows\SYSTEM32\ntdll.dll: KiUserCallbackDispatcher()
+#18 0x76933F1C in C:\Windows\System32\USER32.dll: MBToWCSEx()
+#19 0x76933E87 in C:\Windows\System32\USER32.dll: MBToWCSEx()
+#20 0x004077B9 in E:\game\main.exe: (anonymous namespace)::TX::_txCanvas_WndProc()
+#21 0x769516AB in C:\Windows\System32\USER32.dll: AddClipboardFormatListener()
+#22 0x76947E1A in C:\Windows\System32\USER32.dll: GetClassLongW()
+#23 0x76947A1A in C:\Windows\System32\USER32.dll: GetClassLongW()
+#24 0x7694BEEF in C:\Windows\System32\USER32.dll: CallNextHookEx()
+#25 0x77EB54BD in C:\Windows\SYSTEM32\ntdll.dll: KiUserCallbackDispatcher()
+#26 0x76933F1C in C:\Windows\System32\USER32.dll: MBToWCSEx()
+#27 0x759835C5 in C:\Windows\system32\uxtheme.dll: Ordinal132()
+#28 0x7597FAE1 in C:\Windows\system32\uxtheme.dll: Ordinal45()
+#29 0x75978C18 in C:\Windows\system32\uxtheme.dll: GetThemeBackgroundRegion()
+#30 0x76933EBC in C:\Windows\System32\USER32.dll: MBToWCSEx()
+#31 0x004077B9 in E:\game\main.exe: (anonymous namespace)::TX::_txCanvas_WndProc()
+#32 0x769516AB in C:\Windows\System32\USER32.dll: AddClipboardFormatListener()
+#33 0x76947E1A in C:\Windows\System32\USER32.dll: GetClassLongW()
+#34 0x76947A1A in C:\Windows\System32\USER32.dll: GetClassLongW()
+#35 0x7694BEEF in C:\Windows\System32\USER32.dll: CallNextHookEx()
+#36 0x77EB54BD in C:\Windows\SYSTEM32\ntdll.dll: KiUserCallbackDispatcher()
+#37 0x76933F1C in C:\Windows\System32\USER32.dll: MBToWCSEx()
+#38 0x759835C5 in C:\Windows\system32\uxtheme.dll: Ordinal132()
+#39 0x7597FAE1 in C:\Windows\system32\uxtheme.dll: Ordinal45()
+#40 0x75978C18 in C:\Windows\system32\uxtheme.dll: GetThemeBackgroundRegion()
+#41 0x76933EBC in C:\Windows\System32\USER32.dll: MBToWCSEx()
+#42 0x004077B9 in E:\game\main.exe: (anonymous namespace)::TX::_txCanvas_WndProc()
+#43 0x769516AB in C:\Windows\System32\USER32.dll: AddClipboardFormatListener()
+#44 0x76947E1A in C:\Windows\System32\USER32.dll: GetClassLongW()
+#45 0x76946751 in C:\Windows\System32\USER32.dll: DispatchMessageW()
+#46 0x769384D0 in C:\Windows\System32\USER32.dll: DispatchMessageA()
+#47 0x004065BB in E:\game\main.exe: (anonymous namespace)::TX::_txCanvas_ThreadProc()
+#48 0x768B6CFF in C:\Windows\System32\msvcrt.dll: beginthreadex()
+#49 0x768B6DC1 in C:\Windows\System32\msvcrt.dll: endthreadex()
+#50 0x77BEFCC9 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+#51 0x77EA809E in C:\Windows\SYSTEM32\ntdll.dll: RtlGetAppContainerNamedObjectPath()
+#52 0x77EA806E in C:\Windows\SYSTEM32\ntdll.dll: RtlGetAppContainerNamedObjectPath()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Dec 12 2024 18:19:41, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 12 2024 18:20:10
+
+Run file:	E:\game\main.exe
+Directory:	E:\game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\game\main.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F32FC (32-bit), Flags: CMdRe0, Thread: 0x1164 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416409 in E:\game\main.exe: (anonymous namespace)::TX::txBitBlt()
+# 1 0x0041C71D in E:\game\main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Dec 12 2024 18:24:35, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 12 2024 18:24:56
+
+Run file:	E:\game\main.exe
+Directory:	E:\game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\game\main.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F32FC (32-bit), Flags: CMdRe0, Thread: 0x20C0 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416409 in E:\game\main.exe: (anonymous namespace)::TX::txBitBlt()
+# 1 0x0041C5AF in E:\game\main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Dec 12 2024 18:33:06, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 12 2024 18:33:33
+
+Run file:	E:\game\main.exe
+Directory:	E:\game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\game\main.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F32FC (32-bit), Flags: CMdRe0, Thread: 0x1364 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416409 in E:\game\main.exe: (anonymous namespace)::TX::txBitBlt()
+# 1 0x0041C5AF in E:\game\main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Dec 12 2024 18:35:13, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 12 2024 18:35:32
+
+Run file:	E:\game\main.exe
+Directory:	E:\game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\game\main.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F32FC (32-bit), Flags: CMdRe0, Thread: 0xB9C (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416409 in E:\game\main.exe: (anonymous namespace)::TX::txBitBlt()
+# 1 0x0041C5AF in E:\game\main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Dec 12 2024 18:40:33, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 12 2024 18:40:54
+
+Run file:	E:\game\main.exe
+Directory:	E:\game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\game\main.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F32FC (32-bit), Flags: CMdRe0, Thread: 0x4D8 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416409 in E:\game\main.exe: (anonymous namespace)::TX::txBitBlt()
+# 1 0x0041C5AF in E:\game\main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Dec 12 2024 18:47:00, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 12 2024 18:47:29
+
+Run file:	E:\game\main.exe
+Directory:	E:\game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\game\main.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F32FC (32-bit), Flags: CMdRe0, Thread: 0x1784 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416409 in E:\game\main.exe: (anonymous namespace)::TX::txBitBlt()
+# 1 0x0041C60A in E:\game\main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Dec 12 2024 19:15:27, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 12 2024 19:15:48
+
+Run file:	E:\game\main.exe
+Directory:	E:\game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\game\main.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F32FC (32-bit), Flags: CMdRe0, Thread: 0x14A8 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416409 in E:\game\main.exe: (anonymous namespace)::TX::txBitBlt()
+# 1 0x0041C60A in E:\game\main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Dec 12 2024 19:17:02, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 12 2024 19:17:23
+
+Run file:	E:\game\main.exe
+Directory:	E:\game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\game\main.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F32FC (32-bit), Flags: CMdRe0, Thread: 0x240C (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416409 in E:\game\main.exe: (anonymous namespace)::TX::txBitBlt()
+# 1 0x0041C60A in E:\game\main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Dec 12 2024 19:18:28, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 12 2024 19:18:58
+
+Run file:	E:\game\main.exe
+Directory:	E:\game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\game\main.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F32FC (32-bit), Flags: CMdRe0, Thread: 0x8B0 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416409 in E:\game\main.exe: (anonymous namespace)::TX::txBitBlt()
+# 1 0x0041C656 in E:\game\main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Dec 12 2024 19:25:21, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 12 2024 19:25:41
+
+Run file:	E:\game\main.exe
+Directory:	E:\game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\game\main.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F32FC (32-bit), Flags: CMdRe0, Thread: 0x1130 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416409 in E:\game\main.exe: (anonymous namespace)::TX::txBitBlt()
+# 1 0x0041C656 in E:\game\main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Dec 12 2024 19:25:21, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 17 2024 17:04:07
+
+Run file:	E:\game\main.exe
+Directory:	E:\game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\game\main.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F32FC (32-bit), Flags: CMdRe0, Thread: 0x120C (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416409 in E:\game\main.exe: (anonymous namespace)::TX::txBitBlt()
+# 1 0x0041C60A in E:\game\main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Dec 17 2024 17:19:44, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 17 2024 17:20:11
+
+Run file:	E:\game\main.exe
+Directory:	E:\game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\game\main.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F32FC (32-bit), Flags: CMdRe0, Thread: 0x1D1C (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416409 in E:\game\main.exe: (anonymous namespace)::TX::txBitBlt()
+# 1 0x0041C60A in E:\game\main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Dec 17 2024 17:20:19, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 17 2024 17:20:39
+
+Run file:	E:\game\main.exe
+Directory:	E:\game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\game\main.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F32FC (32-bit), Flags: CMdRe0, Thread: 0x2080 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416409 in E:\game\main.exe: (anonymous namespace)::TX::txBitBlt()
+# 1 0x0041C60A in E:\game\main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Dec 17 2024 17:21:48, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 17 2024 17:22:08
+
+Run file:	E:\game\main.exe
+Directory:	E:\game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\game\main.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 8709, функция: HWND__* {anonymous}::TX::txCreateWindow(double, double, bool),
+
+Сообщение: Окно рисования уже создано!
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F32FC (32-bit), Flags: CMdRe0, Thread: 0x1428 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00402D2A in E:\game\main.exe: (anonymous namespace)::TX::txCreateWindow()
+# 1 0x0041C453 in E:\game\main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Dec 17 2024 18:20:57, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 17 2024 18:21:18
+
+Run file:	E:\game\main.exe
+Directory:	E:\game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\game\main.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 8709, функция: HWND__* {anonymous}::TX::txCreateWindow(double, double, bool),
+
+Сообщение: Окно рисования уже создано!
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F32FC (32-bit), Flags: CMdRe0, Thread: 0x2840 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00402D2A in E:\game\main.exe: (anonymous namespace)::TX::txCreateWindow()
+# 1 0x0041C453 in E:\game\main.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Dec 17 2024 18:20:57, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 19 2024 17:05:09
+
+Run file:	E:\game\main.exe
+Directory:	E:\game
+
+--------------------------------------------------

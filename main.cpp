@@ -59,6 +59,7 @@ txTextCursor (false);
     HDC bird_CP = txLoadImage("bird_CP.bmp");
     HDC space_1 = txLoadImage("SPACE_1.bmp");
     HDC space_2 = txLoadImage("SPACE_2.bmp");
+    HDC astr_priz = txLoadImage("astr_priz.bmp");
 
 
     //Pole pole1={-150,230,300,93,100,31,txLoadImage("location.bmp")}   ;
@@ -233,7 +234,7 @@ txTextCursor (false);
             }
 
 
-            if (y>550)
+            if (x<600 && x>700 && y>550)
             {
               y=y-15;
             }
@@ -253,11 +254,21 @@ txTextCursor (false);
 
 
         }
-
-
-
         if (PAGE=="cityP")
         {
+            x=100;
+            y=20;
+
+            PAGE="cityP!";
+            Sleep(200);
+
+        }
+
+
+        if (PAGE=="cityP!")
+        {
+
+
             txBitBlt(txDC(),0,0,800,600,cityP);
 
             txBitBlt(txDC(),x,y,800,600,bird_CP);
@@ -289,6 +300,8 @@ txTextCursor (false);
 
         if (PAGE=="con_1")
         {
+
+
             txSetColor(TX_BLACK);
             txSetFillColor(TX_BLACK);
             txRectangle(0,0,800,600);
@@ -300,10 +313,68 @@ txTextCursor (false);
             txBitBlt(txDC(),75,75,800,600,bird_CP);
 
 
+            txSetColor(TX_BLACK);
+            txSetFillColor(TX_BLACK);
+            txSelectFont("Ink Free",20);
+            txTextOut(200,60,"parrot:Где я?");
+            txTextOut(600,130,"Press ""E""");
+
+            if (GetAsyncKeyState('E'))
+            {
+              PAGE="astr_priz";
+            }
 
 
 
         }
+
+        if (PAGE=="astr_priz")
+        {
+            txSetColor(TX_BLACK);
+            txSetFillColor(TX_BLACK);
+            txRectangle(0,0,800,600);
+
+            txSetColor(TX_GREY,5);
+            txRectangle(50,50,150,150);
+            txSetFillColor(TX_GREY);
+            txRectangle(150,50,700,150);
+            txBitBlt(txDC(),60,60,800,600,astr_priz);
+
+
+            txSelectFont("Ink Free",20);
+            txTextOut(200,60,"astral ghost:Данное место называется астралом");
+            txTextOut(600,130,"Press ""A""");
+
+            if (GetAsyncKeyState('A'))
+            {
+
+              PAGE="astr_priz_poys";
+            }
+
+        }
+
+        if (PAGE=="astr_priz_poys")
+        {
+            txSetColor(TX_BLACK);
+            txSetFillColor(TX_BLACK);
+            txRectangle(0,0,800,600);
+
+            txSetColor(TX_GREY,5);
+            txRectangle(50,50,150,150);
+            txSetFillColor(TX_GREY);
+            txRectangle(150,50,700,150);
+            txBitBlt(txDC(),60,60,800,600,astr_priz);
+
+
+            txSelectFont("Ink Free",20);
+            txTextOut(200,60,"astral ghost:Здесь ты можешь встретить как дружеских существ");
+            txTextOut(200,70,"так и враждебных");
+            txTextOut(600,130,"Press ""E""");
+
+        }
+
+
+
 
 
         txEnd();

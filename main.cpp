@@ -3,6 +3,8 @@
 using namespace std;
 
 
+int SCH=0;
+
 struct Button
 {
     int x;
@@ -44,8 +46,8 @@ txTextCursor (false);
 
 
 
-    Button btn0 = {100, 100, 120, 40, "Старт"};
-    Button btn1 = {100, 160, 120, 40, "Выход"};
+    Button btn0 = {330, 190, 120, 40, "Старт"};
+    Button btn1 = {330, 230, 120, 40, "Выход"};
 
     HDC pole = txLoadImage("location.bmp");
     HDC birdA_1 = txLoadImage("bird_1.bmp");
@@ -53,6 +55,10 @@ txTextCursor (false);
     HDC birdAZ_1 = txLoadImage("bird_1_zerk.bmp");
     HDC birdAZ_2 = txLoadImage("bird_2_zerk.bmp");
     HDC nebo = txLoadImage("nebo.bmp");
+    HDC cityP = txLoadImage("cityP.bmp");
+    HDC bird_CP = txLoadImage("bird_CP.bmp");
+    HDC space_1 = txLoadImage("SPACE_1.bmp");
+    HDC space_2 = txLoadImage("SPACE_2.bmp");
 
 
     //Pole pole1={-150,230,300,93,100,31,txLoadImage("location.bmp")}   ;
@@ -68,9 +74,16 @@ txTextCursor (false);
 
 
         btn0.draw();
+        btn1.draw();
         if (btn0.click())
         {
             PAGE="game";
+        }
+
+
+        if (btn1.click())
+        {
+
         }
 
 
@@ -79,9 +92,12 @@ txTextCursor (false);
             txBitBlt(txDC(),0,0,800,600,pole);
 
 
+
+
             txBitBlt(txDC(),x,y,800,600,birdA_1);
             txSleep(70);
             txBitBlt(txDC(),x,y,800,600,birdA_2);
+            txSleep(70);
 
 
             if (GetAsyncKeyState('A'))
@@ -110,6 +126,11 @@ txTextCursor (false);
                 PAGE="Llist";
             }
 
+            if (x>760)
+            {
+                PAGE="Rlist";
+            }
+
         }
 
 
@@ -120,6 +141,7 @@ txTextCursor (false);
             txBitBlt(txDC(),x,y,800,600,birdA_1);
             txSleep(70);
             txBitBlt(txDC(),x,y,800,600,birdA_2);
+            txSleep(70);
 
 
             if (GetAsyncKeyState('A'))
@@ -154,7 +176,135 @@ txTextCursor (false);
               PAGE="game";
             }
 
+            if (y>550)
+            {
+              y=y-15;
+            }
+
+            if (y<0)
+            {
+              y=y+15;
+            }
+
+
         }
+
+        if (PAGE=="Rlist")
+        {
+            txBitBlt(txDC(),0,0,800,600,nebo);
+
+            txBitBlt(txDC(),x,y,800,600,birdA_1);
+            txSleep(70);
+            txBitBlt(txDC(),x,y,800,600,birdA_2);
+            txSleep(70);
+
+
+            if (GetAsyncKeyState('A'))
+            {
+                x=x-10;
+            }
+
+            if (GetAsyncKeyState('W'))
+            {
+                y=y-10;
+            }
+
+            if (GetAsyncKeyState('D'))
+            {
+                x=x+10;
+
+            }
+
+            if (GetAsyncKeyState('S'))
+            {
+                y=y+10;
+            }
+
+            if (x>730)
+            {
+              x=x-15;
+            }
+
+
+            if (x<50)
+            {
+              PAGE="game";
+
+            }
+
+
+            if (y>550)
+            {
+              y=y-15;
+            }
+
+            if (y<0)
+            {
+              y=y+15;
+            }
+
+
+            if (x>600 && x<700 && y>550)
+            {
+                PAGE="cityP";
+
+
+            }
+
+
+        }
+
+
+
+        if (PAGE=="cityP")
+        {
+            txBitBlt(txDC(),0,0,800,600,cityP);
+
+            txBitBlt(txDC(),x,y,800,600,bird_CP);
+
+
+            x=100;
+            y=20;
+
+
+            if (GetAsyncKeyState(VK_SPACE))
+            {
+               SCH=SCH+1;
+               txSleep(100);
+            }
+
+            txBitBlt(txDC(),340,500,500,590,space_1);
+            txSleep(250);
+            txBitBlt(txDC(),340,500,500,590,space_2);
+            txSleep(250);
+
+
+            if (SCH==10)
+            {
+                PAGE="con_1";
+            }
+
+
+        }
+
+        if (PAGE=="con_1")
+        {
+            txSetColor(TX_BLACK);
+            txSetFillColor(TX_BLACK);
+            txRectangle(0,0,800,600);
+
+            txSetColor(TX_GREY,5);
+            txRectangle(50,50,150,150);
+            txSetFillColor(TX_GREY);
+            txRectangle(150,50,700,150);
+            txBitBlt(txDC(),75,75,800,600,bird_CP);
+
+
+
+
+
+        }
+
 
         txEnd();
 
@@ -162,8 +312,7 @@ txTextCursor (false);
 
     }
 
-    //x=430;
-    //y=140;
+
 
 
 

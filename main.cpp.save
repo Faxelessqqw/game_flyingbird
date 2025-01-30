@@ -3,6 +3,8 @@
 using namespace std;
 
 
+int SCH=0;
+
 struct Button
 {
     int x;
@@ -44,15 +46,19 @@ txTextCursor (false);
 
 
 
-    Button btn0 = {100, 100, 120, 40, "Старт"};
-    Button btn1 = {100, 160, 120, 40, "Выход"};
+    Button btn0 = {330, 190, 120, 40, "Старт"};
+    Button btn1 = {330, 230, 120, 40, "Выход"};
 
-    HDC pole = txLoadImage("location.bmp");
+    
     HDC birdA_1 = txLoadImage("bird_1.bmp");
     HDC birdA_2 = txLoadImage("bird_2.bmp");
     HDC birdAZ_1 = txLoadImage("bird_1_zerk.bmp");
     HDC birdAZ_2 = txLoadImage("bird_2_zerk.bmp");
     HDC nebo = txLoadImage("nebo.bmp");
+    HDC cityP = txLoadImage("cityP.bmp");
+    HDC bird_CP = txLoadImage("bird_CP.bmp");
+    HDC space_1 = txLoadImage("SPACE_1.bmp");
+    HDC space_2 = txLoadImage("SPACE_2.bmp");
 
 
     //Pole pole1={-150,230,300,93,100,31,txLoadImage("location.bmp")}   ;
@@ -68,15 +74,24 @@ txTextCursor (false);
 
 
         btn0.draw();
+        btn1.draw();
         if (btn0.click())
         {
             PAGE="game";
         }
 
 
+        if (btn1.click())
+        {
+
+        }
+
+
         if (PAGE=="game")
         {
             txBitBlt(txDC(),0,0,800,600,pole);
+
+
 
 
             txBitBlt(txDC(),x,y,800,600,birdA_1);
@@ -108,6 +123,11 @@ txTextCursor (false);
             if (x<0)
             {
                 PAGE="Llist";
+            }
+
+            if (x>760)
+            {
+                PAGE="Rlist";
             }
 
         }
@@ -147,14 +167,105 @@ txTextCursor (false);
             {
               x=x+15;
             }
-            
-            
-            if (x>800)
+
+
+            if (x>750)
             {
-              x=x+15;
+              PAGE="game";
+            }
+        }
+
+        if (PAGE=="Rlist")
+        {
+            txBitBlt(txDC(),0,0,800,600,nebo);
+
+            txBitBlt(txDC(),x,y,800,600,birdA_1);
+            txSleep(70);
+            txBitBlt(txDC(),x,y,800,600,birdA_2);
+
+
+            if (GetAsyncKeyState('A'))
+            {
+                x=x-10;
             }
 
+            if (GetAsyncKeyState('W'))
+            {
+                y=y-10;
+            }
+
+            if (GetAsyncKeyState('D'))
+            {
+                x=x+10;
+
+            }
+
+            if (GetAsyncKeyState('S'))
+            {
+                y=y+10;
+            }
+
+            if (x>730)
+            {
+              x=x-15;
+            }
+
+
+            if (x<50)
+            {
+              PAGE="game";
+
+            }
+
+
+            if (x>600 && x<700 && y>550)
+            {
+                PAGE="cityP";
+
+
+            }
+
+
         }
+
+
+
+        if (PAGE=="cityP")
+        {
+            txBitBlt(txDC(),0,0,800,600,cityP);
+
+            txBitBlt(txDC(),x,y,800,600,bird_CP);
+
+
+            x=100;
+            y=20;
+
+
+            if (GetAsyncKeyState(VK_SPACE))
+            {
+               SCH=SCH+1;
+               txSleep(100);
+            }
+
+            txBitBlt(txDC(),0,0,800,600,space_1);
+            txBitBlt(txDC(),0,0,800,600,pole);
+
+
+            if (SCH==10)
+            {
+                PAGE="con_1";
+            }
+
+
+        }
+
+        if (PAGE=="con_1")
+        {
+            txSetColor(TX_BLACK);
+            txSetFillColor(TX_BLACK);
+            txRectangle(0,0,800,600);
+        }
+
 
         txEnd();
 
@@ -162,8 +273,7 @@ txTextCursor (false);
 
     }
 
-    //x=430;
-    //y=140;
+
 
 
 

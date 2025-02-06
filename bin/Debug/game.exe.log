@@ -1,0 +1,167 @@
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: E:\game\bin\Debug\game.exe, файл: c:\codeblocs\codeblocks\mingw\include\txlib.h, строка: 13850, функция: bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double),
+
+Сообщение: Прямоугольник копируемой области {0, 0, 800, 600} не полностью лежит внутри изображения-источника {0, 0, 710, 536}, функция txAlphaBlend() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005052FC (32-bit), Flags: CMdRe0, Thread: 0x18B8 (Main), GetLastError(): 13 (Недопустимые данные). 
+From: c:\codeblocs\codeblocks\mingw\include\txlib.h:13849 bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double).
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double) at c:\codeblocs\codeblocks\mingw\include\txlib.h:13849:
+
+  13847:         {
+  13848: $       SetLastError (ERROR_INVALID_DATA);
+=>13849: $       TX_ERROR ("Прямоугольник копируемой области {%g, %g, %g, %g} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  13850:                   "функция txAlphaBlend() работать не будет.", xSource, ySource, xSource + width, ySource + height, 0, 0, (int) size.x, (int) size.y);
+  13851:         }
+
+# 1 in int main() at E:\game\main.cpp:9:
+
+      7:     HDC pole = txLoadImage("location.bmp");
+      8: 
+=>    9:     txAlphaBlend(txDC(),0,0,800,600,pole);
+     10: 
+     11: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocs\codeblocks\mingw\include\txlib.h
+Compiled:	Dec  5 2024 18:41:14, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 05 2024 18:41:36
+
+Run file:	E:\game\bin\Debug\game.exe
+Directory:	E:\game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\game\bin\Debug\game.exe, файл: c:\codeblocs\codeblocks\mingw\include\txlib.h, строка: 10153, функция: bool {anonymous}::TX::_txCanvas_OnDESTROY(HWND),
+
+Сообщение: Обнаружен нулевой или ложный результат.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005062FC (32-bit), Flags: CMdrE0, Thread: 0x11B4 (Canvas), GetLastError(): 6 (Неверный дескриптор). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txCanvas_OnDESTROY(HWND) at c:\codeblocs\codeblocks\mingw\include\txlib.h:10153:
+
+  10151: 
+  10152: $   if (_txCanvas_BackBuf[1]) _txBuffer_Delete (&_txCanvas_BackBuf[1])  asserted;
+=>10153: $   if (_txCanvas_BackBuf[0]) _txBuffer_Delete (&_txCanvas_BackBuf[0])  asserted;
+  10154: $   _txCanvas_Pixels = NULL;
+  10155: 
+
+# 1 in LRESULT {anonymous}::TX::_txCanvas_WndProc(HWND, UINT, WPARAM, LPARAM) at c:\codeblocs\codeblocks\mingw\include\txlib.h:10052:
+
+  10050: 
+  10051:         case WM_CLOSE:          {$ if (_txCanvas_OnCLOSE      (wnd))  break;       else return 0; }
+=>10052:         case WM_DESTROY:        {$     _txCanvas_OnDESTROY    (wnd);                    return 0; }
+  10053: 
+  10054:         case WM_ERASEBKGND:     {$ if (!bkErased) { bkErased = true;  break; }     else return 1; }
+
+# 2 in void {anonymous}::TX::_txCleanup() at c:\codeblocs\codeblocks\mingw\include\txlib.h:9111:
+
+   9109: 
+   9110: $   if (txWindow())
+=> 9111:         {$ SendNotifyMessage (txWindow(), WM_DESTROY, 0, 0); }
+   9112: 
+   9113: $   _txWaitFor (!txWindow(), 5*_TX_TIMEOUT);
+
+# 3 in unsigned int {anonymous}::TX::_txCanvas_ThreadProc(void*) at c:\codeblocs\codeblocks\mingw\include\txlib.h:9852:
+
+   9850: $   if (_txRunning && _txMain)         // Main window is destroyed but main() is still running.
+   9851:         {                              // No chances for good termination, so use exit().
+=> 9852: $       _txCleanup();
+   9853: $       ::exit ((int) msg.wParam);     //-V202 //-V2509 //-V2014
+   9854:         }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocs\codeblocks\mingw\include\txlib.h
+Compiled:	Dec  5 2024 18:59:19, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 05 2024 18:59:39
+
+Run file:	E:\game\bin\Debug\game.exe
+Directory:	E:\game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\game\bin\Debug\game.exe, файл: c:\codeblocs\codeblocks\mingw\include\txlib.h, строка: 13722, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005092FC (32-bit), Flags: CMdRe0, Thread: 0x2B70 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int) at c:\codeblocs\codeblocks\mingw\include\txlib.h:13722:
+
+  13720:     {
+  13721: $1  if (_TX_HDC_FAILED (destImage))   return false;
+=>13722: $   if (_TX_HDC_FAILED (sourceImage)) return false;
+  13723: 
+  13724: $   POINT size = txGetExtent (sourceImage);
+
+# 1 in int main() at E:\game\main.cpp:102:
+
+    100:         {
+    101:             itapG="game";
+=>  102:             txBitBlt(txDC(),0,0,800,600,pole);
+    103: 
+    104: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocs\codeblocks\mingw\include\txlib.h
+Compiled:	Feb  6 2025 19:29:45, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Feb 06 2025 19:31:21
+
+Run file:	E:\game\bin\Debug\game.exe
+Directory:	E:\game\bin\Debug
+
+--------------------------------------------------

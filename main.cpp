@@ -5,6 +5,8 @@ using namespace std;
 
 int SCH=0;
 
+string itapG="game";
+
 struct Button
 {
     int x;
@@ -64,7 +66,7 @@ txTextCursor (false);
 
     //Pole pole1={-150,230,300,93,100,31,txLoadImage("location.bmp")}   ;
 
-    while (!GetAsyncKeyState(VK_ESCAPE))
+    while (!GetAsyncKeyState(VK_F9))
     {
 
         txBegin();
@@ -73,23 +75,30 @@ txTextCursor (false);
         txRectangle(0,0,800,600);
 
 
-
-        btn0.draw();
-        btn1.draw();
-        if (btn0.click())
+        if (PAGE=="menu");
         {
-            PAGE="game";
+            btn0.draw();
+            btn1.draw();
+            if (btn0.click())
+            {
+                PAGE=itapG;
+            }
+
+
+            if (btn1.click())
+            {
+
+            }
         }
 
-
-        if (btn1.click())
+        if (GetAsyncKeyState(VK_ESCAPE))
         {
-
+          PAGE="menu";
         }
-
 
         if (PAGE=="game")
         {
+            itapG="game";
             txBitBlt(txDC(),0,0,800,600,pole);
 
 
@@ -137,6 +146,8 @@ txTextCursor (false);
 
         if (PAGE=="Llist")
         {
+
+            itapG="Llist";
             txBitBlt(txDC(),0,0,800,600,nebo);
 
             txBitBlt(txDC(),x,y,800,600,birdA_1);
@@ -192,6 +203,8 @@ txTextCursor (false);
 
         if (PAGE=="Rlist")
         {
+
+            itapG="Rlist";
             txBitBlt(txDC(),0,0,800,600,nebo);
 
             txBitBlt(txDC(),x,y,800,600,birdA_1);
@@ -256,6 +269,7 @@ txTextCursor (false);
         }
         if (PAGE=="cityP")
         {
+            itapG="cityP";
             x=100;
             y=20;
 
@@ -268,7 +282,7 @@ txTextCursor (false);
         if (PAGE=="cityP!")
         {
 
-
+            itapG="cityP!";
             txBitBlt(txDC(),0,0,800,600,cityP);
 
             txBitBlt(txDC(),x,y,800,600,bird_CP);
@@ -301,7 +315,7 @@ txTextCursor (false);
         if (PAGE=="con_1")
         {
 
-
+            itapG="con_1";
             txSetColor(TX_BLACK);
             txSetFillColor(TX_BLACK);
             txRectangle(0,0,800,600);
@@ -321,6 +335,7 @@ txTextCursor (false);
 
             if (GetAsyncKeyState('E'))
             {
+              while(GetAsyncKeyState('E'))  txSleep(20);
               PAGE="astr_priz";
             }
 
@@ -330,6 +345,7 @@ txTextCursor (false);
 
         if (PAGE=="astr_priz")
         {
+            itapG="astr_priz";
             txSetColor(TX_BLACK);
             txSetFillColor(TX_BLACK);
             txRectangle(0,0,800,600);
@@ -342,40 +358,80 @@ txTextCursor (false);
 
 
             txSelectFont("Ink Free",20);
+            txSetColor(TX_BLACK);
+            txSetFillColor(TX_BLACK);
             txTextOut(200,60,"astral ghost:Данное место называется астралом");
-            txTextOut(600,130,"Press ""A""");
-
-            if (GetAsyncKeyState('A'))
-            {
-
-              PAGE="astr_priz_poys";
-            }
-
-        }
-
-        if (PAGE=="astr_priz_poys")
-        {
-            txSetColor(TX_BLACK);
-            txSetFillColor(TX_BLACK);
-            txRectangle(0,0,800,600);
-
-            txSetColor(TX_GREY,5);
-            txRectangle(50,50,150,150);
-            txSetFillColor(TX_GREY);
-            txRectangle(150,50,700,150);
-            txBitBlt(txDC(),60,60,800,600,astr_priz);
-
-
-            txSelectFont("Ink Free",20);
-            txTextOut(200,60,"astral ghost:Здесь ты можешь встретить как дружеских существ");
-            txTextOut(200,70,"так и враждебных");
             txTextOut(600,130,"Press ""E""");
 
+             if (GetAsyncKeyState('E'))
+            {
+              while(GetAsyncKeyState('E'))  txSleep(20);
+              PAGE="astr_priz_dialog1";
+            }
+
+
+        }
+
+        if (PAGE=="astr_priz_dialog1")
+        {
+            itapG="astr_priz_dialog1";
+            txSetColor(TX_BLACK);
+            txSetFillColor(TX_BLACK);
+            txRectangle(0,0,800,600);
+
+            txSetColor(TX_GREY,5);
+            txRectangle(50,50,150,150);
+            txSetFillColor(TX_GREY);
+            txRectangle(150,50,700,150);
+            txBitBlt(txDC(),60,60,800,600,astr_priz);
+
+            txSelectFont("Ink Free",20);
+            txSetColor(TX_BLACK);
+            txSetFillColor(TX_BLACK);
+            txTextOut(200,60,"astral ghost:я не должен с тобой разговаривать");
+            txTextOut(600,130,"Press ""E""");
+
+
+            txSetColor(TX_WHITE);
+            txSetFillColor(TX_WHITE);
+            txRectangle(615,530,800,600);
+            txSetColor(TX_GREEN);
+            txSetFillColor(TX_GREEN);
+            txSelectFont("Courier New",20);
+            txTextOut(630,550,"получен новый предмет");
+
+
+             if (GetAsyncKeyState('E'))
+             {
+               while(GetAsyncKeyState('E'))  txSleep(20);
+               PAGE="astr_priz_dialog2";
+             }
+
         }
 
 
 
+        if (PAGE=="astr_priz_dialog2")
+        {
+            itapG="astr_priz_dialog2";
+            txSetColor(TX_BLACK);
+            txSetFillColor(TX_BLACK);
+            txRectangle(0,0,800,600);
 
+            txSetColor(TX_GREY,5);
+            txRectangle(50,50,150,150);
+            txSetFillColor(TX_GREY);
+            txRectangle(150,50,700,150);
+            txBitBlt(txDC(),60,60,800,600,astr_priz);
+
+            txSelectFont("Ink Free",20);
+            txSetColor(TX_BLACK);
+            txSetFillColor(TX_BLACK);
+            txTextOut(200,60,"astral ghost:этим я смогу тебе помогу, зови если понадаблюсь");
+
+
+
+         }
 
         txEnd();
 

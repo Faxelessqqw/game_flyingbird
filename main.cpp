@@ -52,8 +52,11 @@ txTextCursor (false);
     Button btn1 = {330, 230, 120, 40, "Выход"};
 
     HDC pole = txLoadImage("location.bmp");
+    HDC astr_world = txLoadImage("astr_world.bmp");
     HDC birdA_1 = txLoadImage("bird_1.bmp");
     HDC birdA_2 = txLoadImage("bird_2.bmp");
+    HDC birdA_1_astrW = txLoadImage("bird_1_astr_world.bmp");
+    HDC birdA_2_astrW = txLoadImage("bird_2_astr_world.bmp");
     HDC birdAZ_1 = txLoadImage("bird_1_zerk.bmp");
     HDC birdAZ_2 = txLoadImage("bird_2_zerk.bmp");
     HDC nebo = txLoadImage("nebo.bmp");
@@ -333,6 +336,7 @@ txTextCursor (false);
             txTextOut(200,60,"parrot:Где я?");
             txTextOut(600,130,"Press ""E""");
 
+
             if (GetAsyncKeyState('E'))
             {
               while(GetAsyncKeyState('E'))  txSleep(20);
@@ -428,9 +432,52 @@ txTextCursor (false);
             txSetColor(TX_BLACK);
             txSetFillColor(TX_BLACK);
             txTextOut(200,60,"astral ghost:этим я смогу тебе помогу, зови если понадаблюсь");
+            txTextOut(600,130,"Press ""E""");
+
+
+             if (GetAsyncKeyState('E'))
+             {
+               while(GetAsyncKeyState('E'))  txSleep(20);
+               PAGE="astr_world";
+             }
+
+
+         }
+
+
+         if (PAGE=="astr_world")
+         {
+            itapG="astr_world";
+            txBitBlt(txDC(),0,0,800,600,astr_world);
+
+
+            txBitBlt(txDC(),x,y,800,600,birdA_1_astrW);
+            txSleep(70);
+            txBitBlt(txDC(),x,y,800,600,birdA_2_astrW);
+            txSleep(70);
 
 
 
+            if (GetAsyncKeyState('A'))
+            {
+                x=x-10;
+            }
+
+            if (GetAsyncKeyState('W'))
+            {
+                y=y-10;
+            }
+
+            if (GetAsyncKeyState('D'))
+            {
+                x=x+10;
+
+            }
+
+            if (GetAsyncKeyState('S'))
+            {
+                y=y+10;
+            }
          }
 
         txEnd();

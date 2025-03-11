@@ -215,8 +215,8 @@ txTextCursor (false);
             txBitBlt(txDC(),x,y,800,600,birdA_2);
             txSleep(70);
             txSetFillColor(TX_WHITE);
-            txTextOut(550,500,"down");
-            txSleep(70);
+            txTextOut(600,500,"down");
+
 
 
             if (GetAsyncKeyState('A'))

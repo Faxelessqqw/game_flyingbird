@@ -90,7 +90,7 @@ txTextCursor (false);
 
             if (btn1.click())
             {
-
+                break;
             }
         }
 
@@ -493,4 +493,3 @@ txTextCursor (false);
 txDisableAutoPause();
 return 0;
 }
-

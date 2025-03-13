@@ -5,6 +5,12 @@ using namespace std;
 
 int SCH=0;
 
+int xbat_1=400;
+int ybat_1=200;
+int xbat_2=500;
+int ybat_2=400;
+
+
 string itapG="game";
 
 struct Button
@@ -52,6 +58,7 @@ txTextCursor (false);
     Button btn1 = {330, 230, 120, 40, "Выход"};
 
     HDC pole = txLoadImage("location.bmp");
+    HDC bat = txLoadImage("bat.bmp");
     HDC astr_world = txLoadImage("astr_world.bmp");
     HDC birdA_1 = txLoadImage("bird_1.bmp");
     HDC birdA_2 = txLoadImage("bird_2.bmp");
@@ -65,6 +72,7 @@ txTextCursor (false);
     HDC space_1 = txLoadImage("SPACE_1.bmp");
     HDC space_2 = txLoadImage("SPACE_2.bmp");
     HDC astr_priz = txLoadImage("astr_priz.bmp");
+    HDC star = txLoadImage("star.bmp");
 
 
     //Pole pole1={-150,230,300,93,100,31,txLoadImage("location.bmp")}   ;
@@ -214,8 +222,10 @@ txTextCursor (false);
             txSleep(70);
             txBitBlt(txDC(),x,y,800,600,birdA_2);
             txSleep(70);
-            txSetFillColor(TX_WHITE);
-            txTextOut(600,500,"down");
+
+            txBitBlt(txDC(),650,570,800,600,star);
+            txSleep(2);
+
 
 
 
@@ -457,32 +467,94 @@ txTextCursor (false);
 
 
             txBitBlt(txDC(),x,y,800,600,birdA_1_astrW);
-            txSleep(70);
+            txSleep(20);
             txBitBlt(txDC(),x,y,800,600,birdA_2_astrW);
-            txSleep(70);
+            txSleep(20);
 
+            txBitBlt(txDC(),xbat_1,ybat_1,800,600,bat);
+            ybat_1=ybat_1+30;
+            if (ybat_1>600)
+            {
+                ybat_1=0;
+            }
+            if (ybat_1<400)
+            {
+
+                txSetFillColor(TX_RED);
+                txRectangle(0,ybat_1-20,310,ybat_1+20);
+                if (x==420 and ybat_1+20==y or ybat_1-20==y or ybat_1==y)
+                {
+                  PAGE="DIE";
+
+
+                }
+            }
 
 
             if (GetAsyncKeyState('A'))
             {
-                x=x-10;
+                x=x-20;
             }
 
             if (GetAsyncKeyState('W'))
             {
-                y=y-10;
+                y=y-20;
             }
 
             if (GetAsyncKeyState('D'))
             {
-                x=x+10;
+                x=x+20;
 
             }
 
             if (GetAsyncKeyState('S'))
             {
-                y=y+10;
+                y=y+20;
             }
+         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         if (PAGE=="DIE")
+         {
+           txSetColor(TX_BLACK);
+           txSetFillColor(TX_BLACK);
+           txRectangle(0,0,800,600);
+           txSetColor(TX_RED);
+           txSetFillColor(TX_RED);
+           txTextOut(400,300,"Die");
          }
 
         txEnd();

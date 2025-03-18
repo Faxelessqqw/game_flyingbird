@@ -5,10 +5,12 @@ using namespace std;
 
 int SCH=0;
 
-int xbat_1=400;
+int xbat_1=750;
 int ybat_1=200;
 int xbat_2=500;
 int ybat_2=400;
+
+int schet=2000;
 
 
 string itapG="game";
@@ -379,7 +381,7 @@ txTextCursor (false);
             txSelectFont("Ink Free",20);
             txSetColor(TX_BLACK);
             txSetFillColor(TX_BLACK);
-            txTextOut(200,60,"astral ghost:Данное место называется астралом");
+            txTextOut(200,60,"astral ghost:Данное место называется #?/?#\\");
             txTextOut(600,130,"Press ""E""");
 
              if (GetAsyncKeyState('E'))
@@ -477,12 +479,16 @@ txTextCursor (false);
             {
                 ybat_1=0;
             }
+
+
+
+
             if (ybat_1<400)
             {
 
                 txSetFillColor(TX_RED);
-                txRectangle(0,ybat_1-20,310,ybat_1+20);
-                if (x==420 and ybat_1+20==y or ybat_1-20==y or ybat_1==y)
+                txRectangle(0,ybat_1-10,xbat_1,ybat_1+20);
+                if (ybat_1+20==y or ybat_1-20==y or ybat_1==y)
                 {
                   PAGE="DIE";
 
@@ -511,10 +517,82 @@ txTextCursor (false);
             {
                 y=y+20;
             }
+
+
+            if (x>750)
+            {
+                PAGE="nicegame";
+            }
+
+
+
          }
 
 
+         if (PAGE=="nicegame")
+            {
+                itapG="nicegame";
+                txBitBlt(txDC(),0,0,800,600,astr_world);
 
+
+                txBitBlt(txDC(),x,y,800,600,birdA_1_astrW);
+                txSleep(20);
+                txBitBlt(txDC(),x,y,800,600,birdA_2_astrW);
+                txSleep(20);
+
+                if (GetAsyncKeyState('A'))
+                {
+                    x=x-20;
+                }
+
+                if (GetAsyncKeyState('W'))
+                {
+                    y=y-20;
+                }
+
+                if (GetAsyncKeyState('D'))
+                {
+                    x=x+20;
+
+                }
+
+                if (GetAsyncKeyState('S'))
+                {
+                    y=y+20;
+                }
+
+
+                txBitBlt(txDC(),500,470,800,600,star);
+                schet=schet-40;
+                if (schet==0)
+                {
+                    if (x==500+40 or y==470+40 or x==500-40 or y==470-40)
+                    {
+                        PAGE="nicegame1";
+                    }
+
+                    else
+                    {
+                        PAGE="DIE";
+                    }
+                }
+
+
+
+            }
+
+            if (PAGE=="nicegame1")
+            {
+                itapG="nicegame1";
+                txBitBlt(txDC(),0,0,800,600,astr_world);
+
+
+                txBitBlt(txDC(),x,y,800,600,birdA_1_astrW);
+                txSleep(20);
+                txBitBlt(txDC(),x,y,800,600,birdA_2_astrW);
+                txSleep(20);
+
+             }
 
 
 

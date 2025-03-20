@@ -3,18 +3,19 @@
 using namespace std;
 
 
+//переменные
 int SCH=0;
 
 int xbat_1=750;
 int ybat_1=200;
-int xbat_2=500;
-int ybat_2=400;
-
-int schet=2000;
+int xbat_2=600;
+int ybat_2=550;
 
 
 string itapG="game";
 
+
+//функция кнопки
 struct Button
 {
     int x;
@@ -59,6 +60,7 @@ txTextCursor (false);
     Button btn0 = {330, 190, 120, 40, "Старт"};
     Button btn1 = {330, 230, 120, 40, "Выход"};
 
+    //изображения
     HDC pole = txLoadImage("location.bmp");
     HDC bat = txLoadImage("bat.bmp");
     HDC astr_world = txLoadImage("astr_world.bmp");
@@ -77,7 +79,7 @@ txTextCursor (false);
     HDC star = txLoadImage("star.bmp");
 
 
-    //Pole pole1={-150,230,300,93,100,31,txLoadImage("location.bmp")}   ;
+
 
     while (!GetAsyncKeyState(VK_F9))
     {
@@ -87,7 +89,7 @@ txTextCursor (false);
         txSetFillColor (TX_WHITE);
         txRectangle(0,0,800,600);
 
-
+        //меню
         if (PAGE=="menu");
         {
             btn0.draw();
@@ -108,7 +110,7 @@ txTextCursor (false);
         {
           PAGE="menu";
         }
-
+        //основная игра
         if (PAGE=="game")
         {
             itapG="game";
@@ -156,7 +158,7 @@ txTextCursor (false);
 
         }
 
-
+        //левая часть основного мира
         if (PAGE=="Llist")
         {
 
@@ -213,7 +215,7 @@ txTextCursor (false);
 
 
         }
-
+        //правая часть основного мира
         if (PAGE=="Rlist")
         {
 
@@ -285,7 +287,7 @@ txTextCursor (false);
 
             }
 
-
+        //подземный мир
         }
         if (PAGE=="cityP")
         {
@@ -331,7 +333,7 @@ txTextCursor (false);
 
 
         }
-
+        //консцена
         if (PAGE=="con_1")
         {
 
@@ -562,20 +564,30 @@ txTextCursor (false);
                 }
 
 
-                txBitBlt(txDC(),500,470,800,600,star);
-                schet=schet-40;
-                if (schet==0)
+                txBitBlt(txDC(),xbat_2-20,ybat_2,800,600,bat);
+                xbat_2=xbat_2-30;
+                if (xbat_2<50)
                 {
-                    if (x==500+40 or y==470+40 or x==500-40 or y==470-40)
-                    {
-                        PAGE="nicegame1";
-                    }
+                    xbat_2=750;
+                }
 
-                    else
+                if (xbat_2>200)
+                {
+
+                txSetFillColor(TX_RED);
+                txRectangle(xbat_2,0,xbat_2+40,ybat_2);
+                if (xbat_2+20==x or xbat_2-20==x or xbat_2==x)
                     {
                         PAGE="DIE";
                     }
                 }
+
+                if (x<0)
+                {
+                    PAGE="nicegame1";
+                }
+
+
 
 
 

@@ -11,6 +11,8 @@ int ybat_1=200;
 int xbat_2=600;
 int ybat_2=550;
 
+int schetcik=1000;
+
 
 string itapG="game";
 
@@ -564,9 +566,9 @@ txTextCursor (false);
                 }
 
 
-                txBitBlt(txDC(),xbat_2,ybat_2,800,600,bat);
+                txBitBlt(txDC(),xbat_2-20,ybat_2,800,600,bat);
                 xbat_2=xbat_2-30;
-                if (xbat_2>50)
+                if (xbat_2<50)
                 {
                     xbat_2=750;
                 }
@@ -575,14 +577,14 @@ txTextCursor (false);
                 {
 
                 txSetFillColor(TX_RED);
-                txRectangle(xbat_2-10,0,xbat_2+20,ybat_2);
+                txRectangle(xbat_2,0,xbat_2+40,ybat_2);
                 if (xbat_2+20==x or xbat_2-20==x or xbat_2==x)
                     {
                         PAGE="DIE";
                     }
                 }
 
-                if (x<50)
+                if (x<0)
                 {
                     PAGE="nicegame1";
                 }
@@ -599,11 +601,33 @@ txTextCursor (false);
                 txBitBlt(txDC(),0,0,800,600,astr_world);
 
 
-                txBitBlt(txDC(),x,y,800,600,birdA_1_astrW);
+                txBitBlt(txDC(),400,300,800,600,birdA_1_astrW);
                 txSleep(20);
-                txBitBlt(txDC(),x,y,800,600,birdA_2_astrW);
+                txBitBlt(txDC(),400,300,800,600,birdA_2_astrW);
                 txSleep(20);
 
+
+                txBitBlt(txDC(),0,300,800,600,bat);
+                txSleep(20);
+                txBitBlt(txDC(),0,500,800,600,bat);
+                txSleep(20);
+                txBitBlt(txDC(),0,100,800,600,bat);
+                txSleep(20);
+
+                schetcik=schetcik-20;
+                if (schetcik==0)
+                {
+                    PAGE="nicegame1.1";
+                }
+
+             }
+             
+             
+             if (PAGE=="nicegame1.1")
+             {
+             
+             
+             
              }
 
 

@@ -11,6 +11,8 @@ int ybat_1=200;
 int xbat_2=600;
 int ybat_2=550;
 
+int schetcik=1000;
+
 
 string itapG="game";
 
@@ -603,6 +605,112 @@ txTextCursor (false);
                 txSleep(20);
                 txBitBlt(txDC(),x,y,800,600,birdA_2_astrW);
                 txSleep(20);
+
+
+                txBitBlt(txDC(),0,300,800,600,bat);
+                txSleep(20);
+                txBitBlt(txDC(),0,500,800,600,bat);
+                txSleep(20);
+                txBitBlt(txDC(),0,100,800,600,bat);
+                txSleep(20);
+
+
+                if (GetAsyncKeyState('A'))
+                {
+                    x=x-20;
+                }
+
+                if (GetAsyncKeyState('W'))
+                {
+                    y=y-20;
+                }
+
+                if (GetAsyncKeyState('D'))
+                {
+                    x=x+20;
+
+                }
+
+                if (GetAsyncKeyState('S'))
+                {
+                    y=y+20;
+                }
+
+                schetcik=schetcik-20;
+                if (schetcik==900)
+                {
+                    PAGE="nicegame1.1";
+                }
+
+             }
+
+
+             if (PAGE=="nicegame1.1")
+             {
+                itapG="nicegame1.1";
+                txBitBlt(txDC(),0,0,800,600,astr_world);
+
+
+                txBitBlt(txDC(),x,y,800,600,birdA_1_astrW);
+                txSleep(20);
+                txBitBlt(txDC(),x,y,800,600,birdA_2_astrW);
+                txSleep(20);
+
+                if (GetAsyncKeyState('A'))
+                {
+                    x=x-20;
+                }
+
+                if (GetAsyncKeyState('W'))
+                {
+                    y=y-20;
+                }
+
+                if (GetAsyncKeyState('D'))
+                {
+                    x=x+20;
+
+                }
+
+                if (GetAsyncKeyState('S'))
+                {
+                    y=y+20;
+                }
+
+
+                txBitBlt(txDC(),0,300,800,600,bat);
+                 txSetFillColor(TX_RED);
+                txRectangle(0,300,800,320);
+                if (300+20==y or 300-20==y or 300==y)
+                {
+                  PAGE="DIE";
+
+
+                }
+                txBitBlt(txDC(),0,500,800,600,bat);
+                 txSetFillColor(TX_RED);
+                txRectangle(0,500,800,520);
+                if (500+20==y or 500-20==y or 500==y)
+                {
+                  PAGE="DIE";
+
+
+                }
+                txBitBlt(txDC(),0,100,800,600,bat);
+                 txSetFillColor(TX_RED);
+                txRectangle(0,100,800,120);
+                if (100+20==y or 100-20==y or 100==y)
+                {
+                  PAGE="DIE";
+
+
+                }
+                schetcik=schetcik-20;
+                if (schetcik==400)
+                {
+                  PAGE="nicegame2";
+
+                }
 
              }
 

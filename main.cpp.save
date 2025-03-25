@@ -1,4 +1,5 @@
 #include "TXLib.h"
+#include <windows.h>
 
 using namespace std;
 
@@ -10,6 +11,10 @@ int xbat_1=750;
 int ybat_1=200;
 int xbat_2=600;
 int ybat_2=550;
+
+int x_batton1=330;
+int x_batton11=120;
+
 
 int schetcik=1000;
 
@@ -60,25 +65,27 @@ txTextCursor (false);
 
 
     Button btn0 = {330, 190, 120, 40, "Старт"};
-    Button btn1 = {330, 230, 120, 40, "Выход"};
+    Button btn1 = {330, 310, 120, 40, "Выход"};
+    Button btn2 = {330, 270, 120, 40, "Предметы"};
+    Button btn3 = {330, 230, 120, 40, "Правила"};
 
     //изображения
-    HDC pole = txLoadImage("location.bmp");
-    HDC bat = txLoadImage("bat.bmp");
-    HDC astr_world = txLoadImage("astr_world.bmp");
-    HDC birdA_1 = txLoadImage("bird_1.bmp");
-    HDC birdA_2 = txLoadImage("bird_2.bmp");
-    HDC birdA_1_astrW = txLoadImage("bird_1_astr_world.bmp");
-    HDC birdA_2_astrW = txLoadImage("bird_2_astr_world.bmp");
-    HDC birdAZ_1 = txLoadImage("bird_1_zerk.bmp");
-    HDC birdAZ_2 = txLoadImage("bird_2_zerk.bmp");
-    HDC nebo = txLoadImage("nebo.bmp");
-    HDC cityP = txLoadImage("cityP.bmp");
-    HDC bird_CP = txLoadImage("bird_CP.bmp");
-    HDC space_1 = txLoadImage("SPACE_1.bmp");
-    HDC space_2 = txLoadImage("SPACE_2.bmp");
-    HDC astr_priz = txLoadImage("astr_priz.bmp");
-    HDC star = txLoadImage("star.bmp");
+    HDC pole = txLoadImage("pictures/location.bmp");
+    HDC bat = txLoadImage("pictures/bat.bmp");
+    HDC astr_world = txLoadImage("pictures/astr_world.bmp");
+    HDC birdA_1 = txLoadImage("pictures/bird_1.bmp");
+    HDC birdA_2 = txLoadImage("pictures/bird_2.bmp");
+    HDC birdA_1_astrW = txLoadImage("pictures/bird_1_astr_world.bmp");
+    HDC birdA_2_astrW = txLoadImage("pictures/bird_2_astr_world.bmp");
+    HDC birdAZ_1 = txLoadImage("pictures/bird_1_zerk.bmp");
+    HDC birdAZ_2 = txLoadImage("pictures/bird_2_zerk.bmp");
+    HDC nebo = txLoadImage("pictures/nebo.bmp");
+    HDC cityP = txLoadImage("pictures/cityP.bmp");
+    HDC bird_CP = txLoadImage("pictures/bird_CP.bmp");
+    HDC space_1 = txLoadImage("pictures/SPACE_1.bmp");
+    HDC space_2 = txLoadImage("pictures/SPACE_2.bmp");
+    HDC astr_priz = txLoadImage("pictures/astr_priz.bmp");
+    HDC star = txLoadImage("pictures/star.bmp");
 
 
 
@@ -96,6 +103,8 @@ txTextCursor (false);
         {
             btn0.draw();
             btn1.draw();
+            btn2.draw();
+            btn3.draw();
             if (btn0.click())
             {
                 PAGE=itapG;
@@ -105,6 +114,43 @@ txTextCursor (false);
             if (btn1.click())
             {
                 break;
+            }
+
+            if (btn3.click())
+            {
+                PAGE="rulers";
+            }
+
+            if (btn2.click())
+            {
+                PAGE="item";
+            }
+            if (itapG=="astr_priz" or itapG=="nicegame1.1" or itapG=="nicegame1" or itapG=="nicegame" or itapG=="astr_world" or itapG=="astr_priz_dialog2" or itapG=="astr_priz_dialog1"){
+                if (btn3.click())
+                {
+                    PAGE="rulers1";
+                }
+
+
+                if (PAGE=="rulers1"){
+                txSetFillColor(TX_BLACK);
+                txRectangle(0,0,800,600);
+                txSetFillColor(TX_RED);
+                txSelectFont("Times New Roman", 30);
+                txTextOut(0, 300, "??><<?/.,,><>>[][[[[[]]]]>?>><<:$%#@^&#@%$#@%^@#$%##@^$#@*&#$????");
+
+
+                }
+
+             }
+              if (PAGE=="rulers"){
+                txSetFillColor(TX_WHITE);
+                txRectangle(0,0,800,600);
+                txSetFillColor(TX_BLACK);
+                txSelectFont("Times New Roman", 30);
+                txTextOut(0, 300, "Игра про птицу которая всю жизнь в интересных ");
+                txTextOut(0, 350, "путишествиях, однако тут путишествие оказалось очень интересным");
+                txTextOut(0, 400, "Управление wasd");
             }
         }
 
@@ -601,9 +647,9 @@ txTextCursor (false);
                 txBitBlt(txDC(),0,0,800,600,astr_world);
 
 
-                txBitBlt(txDC(),400,300,800,600,birdA_1_astrW);
+                txBitBlt(txDC(),x,y,800,600,birdA_1_astrW);
                 txSleep(20);
-                txBitBlt(txDC(),400,300,800,600,birdA_2_astrW);
+                txBitBlt(txDC(),x,y,800,600,birdA_2_astrW);
                 txSleep(20);
 
 
@@ -614,20 +660,104 @@ txTextCursor (false);
                 txBitBlt(txDC(),0,100,800,600,bat);
                 txSleep(20);
 
+
+                if (GetAsyncKeyState('A'))
+                {
+                    x=x-20;
+                }
+
+                if (GetAsyncKeyState('W'))
+                {
+                    y=y-20;
+                }
+
+                if (GetAsyncKeyState('D'))
+                {
+                    x=x+20;
+
+                }
+
+                if (GetAsyncKeyState('S'))
+                {
+                    y=y+20;
+                }
+
                 schetcik=schetcik-20;
-                if (schetcik==0)
+                if (schetcik==900)
                 {
                     PAGE="nicegame1.1";
                 }
 
              }
-             
-             
+
+
              if (PAGE=="nicegame1.1")
              {
-             
-             
-             
+                itapG="nicegame1.1";
+                txBitBlt(txDC(),0,0,800,600,astr_world);
+
+
+                txBitBlt(txDC(),x,y,800,600,birdA_1_astrW);
+                txSleep(20);
+                txBitBlt(txDC(),x,y,800,600,birdA_2_astrW);
+                txSleep(20);
+
+                if (GetAsyncKeyState('A'))
+                {
+                    x=x-20;
+                }
+
+                if (GetAsyncKeyState('W'))
+                {
+                    y=y-20;
+                }
+
+                if (GetAsyncKeyState('D'))
+                {
+                    x=x+20;
+
+                }
+
+                if (GetAsyncKeyState('S'))
+                {
+                    y=y+20;
+                }
+
+
+                txBitBlt(txDC(),0,300,800,600,bat);
+                 txSetFillColor(TX_RED);
+                txRectangle(0,300,800,320);
+                if (300+20==y or 300-20==y or 300==y)
+                {
+                  PAGE="DIE";
+
+
+                }
+                txBitBlt(txDC(),0,500,800,600,bat);
+                 txSetFillColor(TX_RED);
+                txRectangle(0,500,800,520);
+                if (500+20==y or 500-20==y or 500==y)
+                {
+                  PAGE="DIE";
+
+
+                }
+                txBitBlt(txDC(),0,100,800,600,bat);
+                 txSetFillColor(TX_RED);
+                txRectangle(0,100,800,120);
+                if (100+20==y or 100-20==y or 100==y)
+                {
+                  PAGE="DIE";
+
+
+                }
+                schetcik=schetcik-20;
+                if (schetcik==400)
+                {
+                  PAGE="nicegame2";
+
+                }
+
              }
 
 

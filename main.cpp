@@ -1,4 +1,5 @@
 #include "TXLib.h"
+#include <windows.h>
 
 using namespace std;
 
@@ -10,6 +11,16 @@ int xbat_1=750;
 int ybat_1=200;
 int xbat_2=600;
 int ybat_2=550;
+
+int x_batton1=330;
+int x_batton11=120;
+int x_batton2=330;
+int x_batton21=120;
+int x_batton3=330;
+int x_batton31=120;
+int x_batton4=330;
+int x_batton41=120;
+
 
 int schetcik=1000;
 
@@ -59,26 +70,25 @@ txTextCursor (false);
 
 
 
-    Button btn0 = {330, 190, 120, 40, "Старт"};
-    Button btn1 = {330, 230, 120, 40, "Выход"};
+
 
     //изображения
-    HDC pole = txLoadImage("location.bmp");
-    HDC bat = txLoadImage("bat.bmp");
-    HDC astr_world = txLoadImage("astr_world.bmp");
-    HDC birdA_1 = txLoadImage("bird_1.bmp");
-    HDC birdA_2 = txLoadImage("bird_2.bmp");
-    HDC birdA_1_astrW = txLoadImage("bird_1_astr_world.bmp");
-    HDC birdA_2_astrW = txLoadImage("bird_2_astr_world.bmp");
-    HDC birdAZ_1 = txLoadImage("bird_1_zerk.bmp");
-    HDC birdAZ_2 = txLoadImage("bird_2_zerk.bmp");
-    HDC nebo = txLoadImage("nebo.bmp");
-    HDC cityP = txLoadImage("cityP.bmp");
-    HDC bird_CP = txLoadImage("bird_CP.bmp");
-    HDC space_1 = txLoadImage("SPACE_1.bmp");
-    HDC space_2 = txLoadImage("SPACE_2.bmp");
-    HDC astr_priz = txLoadImage("astr_priz.bmp");
-    HDC star = txLoadImage("star.bmp");
+    HDC pole = txLoadImage("pictures/location.bmp");
+    HDC bat = txLoadImage("pictures/bat.bmp");
+    HDC astr_world = txLoadImage("pictures/astr_world.bmp");
+    HDC birdA_1 = txLoadImage("pictures/bird_1.bmp");
+    HDC birdA_2 = txLoadImage("pictures/bird_2.bmp");
+    HDC birdA_1_astrW = txLoadImage("pictures/bird_1_astr_world.bmp");
+    HDC birdA_2_astrW = txLoadImage("pictures/bird_2_astr_world.bmp");
+    HDC birdAZ_1 = txLoadImage("pictures/bird_1_zerk.bmp");
+    HDC birdAZ_2 = txLoadImage("pictures/bird_2_zerk.bmp");
+    HDC nebo = txLoadImage("pictures/nebo.bmp");
+    HDC cityP = txLoadImage("pictures/cityP.bmp");
+    HDC bird_CP = txLoadImage("pictures/bird_CP.bmp");
+    HDC space_1 = txLoadImage("pictures/SPACE_1.bmp");
+    HDC space_2 = txLoadImage("pictures/SPACE_2.bmp");
+    HDC astr_priz = txLoadImage("pictures/astr_priz.bmp");
+    HDC star = txLoadImage("pictures/star.bmp");
 
 
 
@@ -88,6 +98,11 @@ txTextCursor (false);
 
         txBegin();
 
+        Button btn0 = {x_batton1, 190, x_batton11, 40, "Старт"};
+        Button btn1 = {x_batton2, 310, x_batton21, 40, "Выход"};
+        Button btn2 = {x_batton3, 270, x_batton31, 40, "Предметы"};
+        Button btn3 = {x_batton4, 230, x_batton41, 40, "Правила"};
+
         txSetFillColor (TX_WHITE);
         txRectangle(0,0,800,600);
 
@@ -96,6 +111,8 @@ txTextCursor (false);
         {
             btn0.draw();
             btn1.draw();
+            btn2.draw();
+            btn3.draw();
             if (btn0.click())
             {
                 PAGE=itapG;
@@ -105,6 +122,53 @@ txTextCursor (false);
             if (btn1.click())
             {
                 break;
+            }
+
+            if (btn3.click())
+            {
+                PAGE="rulers";
+            }
+
+            if (btn2.click())
+            {
+                PAGE="item";
+            }
+            if (itapG=="astr_priz" or itapG=="nicegame1.1" or itapG=="nicegame1" or itapG=="nicegame" or itapG=="astr_world" or itapG=="astr_priz_dialog2" or itapG=="astr_priz_dialog1"){
+                if (btn3.click())
+                {
+                    PAGE="rulers1";
+                }
+
+
+
+                x_batton1=0;
+                x_batton11=800;
+                x_batton2=500;
+                x_batton21=700;
+                x_batton3=0;
+                x_batton31=340;
+                x_batton4=700;
+                x_batton41=800;
+
+                if (PAGE=="rulers1"){
+                txSetFillColor(TX_BLACK);
+                txRectangle(0,0,800,600);
+                txSetFillColor(TX_RED);
+                txSelectFont("Times New Roman", 30);
+                txTextOut(0, 300, "??><<?/.,,><>>[][[[[[]]]]>?>><<:$%#@^&#@%$#@%^@#$%##@^$#@*&#$????");
+
+
+                }
+
+             }
+              if (PAGE=="rulers"){
+                txSetFillColor(TX_WHITE);
+                txRectangle(0,0,800,600);
+                txSetFillColor(TX_BLACK);
+                txSelectFont("Times New Roman", 30);
+                txTextOut(0, 300, "Игра про птицу которая всю жизнь в интересных ");
+                txTextOut(0, 350, "путишествиях, однако тут путишествие оказалось очень интересным");
+                txTextOut(0, 400, "Управление wasd");
             }
         }
 

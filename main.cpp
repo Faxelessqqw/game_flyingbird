@@ -534,6 +534,8 @@ txTextCursor (false);
          {
             itapG="astr_world";
             txBitBlt(txDC(),0,0,800,600,astr_world);
+            txBitBlt(txDC(),750,570,800,600,star);
+            txSleep(2);
 
 
             txBitBlt(txDC(),x,y,800,600,birdA_1_astrW);
@@ -602,7 +604,8 @@ txTextCursor (false);
                 itapG="nicegame";
                 txBitBlt(txDC(),0,0,800,600,astr_world);
 
-
+                txBitBlt(txDC(),5,570,800,600,star);
+                txSleep(2);
                 txBitBlt(txDC(),x,y,800,600,birdA_1_astrW);
                 txSleep(20);
                 txBitBlt(txDC(),x,y,800,600,birdA_2_astrW);
@@ -779,6 +782,136 @@ txTextCursor (false);
              }
 
 
+
+             if (PAGE=="nicegame2.1")
+             {
+                itapG="nicegame2";
+                txBitBlt(txDC(),0,0,800,600,astr_world);
+
+
+                txBitBlt(txDC(),x,y,800,600,birdA_1_astrW);
+                txSleep(20);
+                txBitBlt(txDC(),x,y,800,600,birdA_2_astrW);
+                txSleep(20);
+
+                if (GetAsyncKeyState('A'))
+                {
+                    x=x-20;
+                }
+
+                if (GetAsyncKeyState('W'))
+                {
+                    y=y-20;
+                }
+
+                if (GetAsyncKeyState('D'))
+                {
+                    x=x+20;
+
+                }
+
+                if (GetAsyncKeyState('S'))
+                {
+                    y=y+20;
+                }
+
+
+                txBitBlt(txDC(),0,300,800,600,bat);
+                 txSetFillColor(TX_RED);
+                txRectangle(0,300,800,320);
+                if (300+20==y or 300-20==y or 300==y)
+                {
+                  PAGE="DIE";
+
+
+                }
+                txBitBlt(txDC(),0,500,800,600,bat);
+                 txSetFillColor(TX_RED);
+                txRectangle(0,500,800,520);
+                if (500+20==y or 500-20==y or 500==y)
+                {
+                  PAGE="DIE";
+
+
+                }
+                txBitBlt(txDC(),0,150,800,600,bat);
+                 txSetFillColor(TX_RED);
+                txRectangle(0,150,800,170);
+                if (150+20==y or 150-20==y or 150==y)
+                {
+                  PAGE="DIE";
+
+
+                }
+
+                txBitBlt(txDC(),0,200,800,600,bat);
+                 txSetFillColor(TX_RED);
+                txRectangle(0,200,800,120);
+                if (y==y or y==y or y==y)
+                {
+                  PAGE="DIE";
+
+
+                }
+
+
+
+
+
+             }
+
+
+
+
+
+             if (PAGE=="nicegame2")
+            {
+                itapG="nicegame2.1";
+                txBitBlt(txDC(),0,0,800,600,astr_world);
+
+
+                txBitBlt(txDC(),x,y,800,600,birdA_1_astrW);
+                txSleep(20);
+                txBitBlt(txDC(),x,y,800,600,birdA_2_astrW);
+                txSleep(20);
+
+
+                txBitBlt(txDC(),0,300,800,600,bat);
+                txSleep(20);
+                txBitBlt(txDC(),0,500,800,600,bat);
+                txSleep(20);
+                txBitBlt(txDC(),0,100,800,600,bat);
+                txSleep(20);
+
+
+                if (GetAsyncKeyState('A'))
+                {
+                    x=x-20;
+                }
+
+                if (GetAsyncKeyState('W'))
+                {
+                    y=y-20;
+                }
+
+                if (GetAsyncKeyState('D'))
+                {
+                    x=x+20;
+
+                }
+
+                if (GetAsyncKeyState('S'))
+                {
+                    y=y+20;
+                }
+
+                schetcik=schetcik-20;
+                if (schetcik==300)
+                {
+                    PAGE="nicegame2.1";
+                }
+
+             }
 
 
 

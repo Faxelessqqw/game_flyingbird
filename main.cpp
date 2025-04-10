@@ -214,7 +214,7 @@ txTextCursor (false);
 
             if (x<0)
             {
-                PAGE="Llist";
+                x=x+10;
             }
 
             if (x>760)
@@ -224,60 +224,73 @@ txTextCursor (false);
 
         }
 
+
+
+
+
+
         //левая часть основного мира
         if (PAGE=="Llist")
         {
 
-            itapG="Llist";
-            txBitBlt(txDC(),0,0,800,600,nebo);
 
-            txBitBlt(txDC(),x,y,800,600,birdA_1);
-            txSleep(70);
-            txBitBlt(txDC(),x,y,800,600,birdA_2);
-            txSleep(70);
+                itapG="Llist";
+                txBitBlt(txDC(),0,0,800,600,nebo);
+                txTextOut(400,300,"на этом все");
 
 
-            if (GetAsyncKeyState('A'))
-            {
-                x=x-10;
-            }
-
-            if (GetAsyncKeyState('W'))
-            {
-                y=y-10;
-            }
-
-            if (GetAsyncKeyState('D'))
-            {
-                x=x+10;
-
-            }
-
-            if (GetAsyncKeyState('S'))
-            {
-                y=y+10;
-            }
-
-            if (x<0)
-            {
-              x=x+15;
-            }
 
 
-            if (x>750)
-            {
-              PAGE="game";
-            }
+                txBitBlt(txDC(),x,y,800,600,birdA_1);
+                txSleep(70);
+                txBitBlt(txDC(),x,y,800,600,birdA_2);
+                txSleep(70);
 
-            if (y>550)
-            {
-              y=y-15;
-            }
 
-            if (y<0)
-            {
-              y=y+15;
-            }
+                if (GetAsyncKeyState('A'))
+                {
+                    x=x-10;
+                }
+
+                if (GetAsyncKeyState('W'))
+                {
+                    y=y-10;
+                }
+
+                if (GetAsyncKeyState('D'))
+                {
+                    x=x+10;
+
+                }
+
+                if (GetAsyncKeyState('S'))
+                {
+                    y=y+10;
+                }
+
+                if (x<0)
+                {
+                  x=x+15;
+                }
+
+
+                if (x>750)
+                {
+                  x=x-15;
+                }
+
+                if (y>550)
+                {
+                  y=y-15;
+                }
+
+                if (y<0)
+                {
+                  y=y+15;
+                }
+
+
+
 
 
         }
@@ -908,11 +921,10 @@ txTextCursor (false);
                 schetcik=schetcik-20;
                 if (schetcik==300)
                 {
-                    PAGE="nicegame2.1";
+                    PAGE="Llist";
                 }
 
              }
-
 
 
 
@@ -950,6 +962,9 @@ txTextCursor (false);
            txSetColor(TX_RED);
            txSetFillColor(TX_RED);
            txTextOut(400,300,"Die");
+           txTextOut(350,320,"Press ESC");
+
+
          }
 
         txEnd();

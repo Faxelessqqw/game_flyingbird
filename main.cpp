@@ -92,6 +92,11 @@ txTextCursor (false);
 
 
 
+    //музка
+    music=txLoadSound("music.mp3");
+
+
+
 
     while (!GetAsyncKeyState(VK_F9))
     {
@@ -140,15 +145,6 @@ txTextCursor (false);
                 }
 
 
-
-                x_batton1=0;
-                x_batton11=800;
-                x_batton2=500;
-                x_batton21=700;
-                x_batton3=0;
-                x_batton31=340;
-                x_batton4=700;
-                x_batton41=800;
 
                 if (PAGE=="rulers1"){
                 txSetFillColor(TX_BLACK);

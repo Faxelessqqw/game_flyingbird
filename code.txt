@@ -4,7 +4,7 @@
 using namespace std;
 
 
-//переменные
+//РїРµСЂРµРјРµРЅРЅС‹Рµ
 int SCH=0;
 
 int xbat_1=750;
@@ -28,7 +28,7 @@ int schetcik=1000;
 string itapG="game";
 
 
-//функция кнопки
+//С„СѓРЅРєС†РёСЏ РєРЅРѕРїРєРё
 struct Button
 {
     int x;
@@ -72,7 +72,7 @@ txTextCursor (false);
 
 
 
-    //изображения
+    //РёР·РѕР±СЂР°Р¶РµРЅРёСЏ
     HDC pole = txLoadImage("pictures/location.bmp");
     HDC bat = txLoadImage("pictures/bat.bmp");
     HDC astr_world = txLoadImage("pictures/astr_world.bmp");
@@ -92,7 +92,7 @@ txTextCursor (false);
     
       
     
-    //музка
+    //РјСѓР·РєР°
     music=txLoadSound("music.mp3");
 
 
@@ -103,15 +103,15 @@ txTextCursor (false);
 
         txBegin();
 
-        Button btn0 = {x_batton1, 190, x_batton11, 40, "Старт"};
-        Button btn1 = {x_batton2, 310, x_batton21, 40, "Выход"};
-        Button btn2 = {x_batton3, 270, x_batton31, 40, "Предметы"};
-        Button btn3 = {x_batton4, 230, x_batton41, 40, "Правила"};
+        Button btn0 = {x_batton1, 190, x_batton11, 40, "РЎС‚Р°СЂС‚"};
+        Button btn1 = {x_batton2, 310, x_batton21, 40, "Р’С‹С…РѕРґ"};
+        Button btn2 = {x_batton3, 270, x_batton31, 40, "РџСЂРµРґРјРµС‚С‹"};
+        Button btn3 = {x_batton4, 230, x_batton41, 40, "РџСЂР°РІРёР»Р°"};
 
         txSetFillColor (TX_WHITE);
         txRectangle(0,0,800,600);
 
-        //меню
+        //РјРµРЅСЋ
         if (PAGE=="menu");
         {
             btn0.draw();
@@ -162,9 +162,9 @@ txTextCursor (false);
                 txRectangle(0,0,800,600);
                 txSetFillColor(TX_BLACK);
                 txSelectFont("Times New Roman", 30);
-                txTextOut(0, 300, "Игра про птицу которая всю жизнь в интересных ");
-                txTextOut(0, 350, "путишествиях, однако тут путишествие оказалось очень интересным");
-                txTextOut(0, 400, "Управление wasd");
+                txTextOut(0, 300, "РРіСЂР° РїСЂРѕ РїС‚РёС†Сѓ РєРѕС‚РѕСЂР°СЏ РІСЃСЋ Р¶РёР·РЅСЊ РІ РёРЅС‚РµСЂРµСЃРЅС‹С… ");
+                txTextOut(0, 350, "РїСѓС‚РёС€РµСЃС‚РІРёСЏС…, РѕРґРЅР°РєРѕ С‚СѓС‚ РїСѓС‚РёС€РµСЃС‚РІРёРµ РѕРєР°Р·Р°Р»РѕСЃСЊ РѕС‡РµРЅСЊ РёРЅС‚РµСЂРµСЃРЅС‹Рј");
+                txTextOut(0, 400, "РЈРїСЂР°РІР»РµРЅРёРµ wasd");
             }
         }
 
@@ -172,7 +172,7 @@ txTextCursor (false);
         {
           PAGE="menu";
         }
-        //основная игра
+        //РѕСЃРЅРѕРІРЅР°СЏ РёРіСЂР°
         if (PAGE=="game")
         {
             itapG="game";
@@ -225,14 +225,14 @@ txTextCursor (false);
 
 
 
-        //левая часть основного мира
+        //Р»РµРІР°СЏ С‡Р°СЃС‚СЊ РѕСЃРЅРѕРІРЅРѕРіРѕ РјРёСЂР°
         if (PAGE=="Llist")
         {
 
 
                 itapG="Llist";
                 txBitBlt(txDC(),0,0,800,600,nebo);
-                txTextOut(400,300,"на этом все");
+                txTextOut(400,300,"РЅР° СЌС‚РѕРј РІСЃРµ");
 
 
 
@@ -290,7 +290,7 @@ txTextCursor (false);
 
 
         }
-        //правая часть основного мира
+        //РїСЂР°РІР°СЏ С‡Р°СЃС‚СЊ РѕСЃРЅРѕРІРЅРѕРіРѕ РјРёСЂР°
         if (PAGE=="Rlist")
         {
 
@@ -362,7 +362,7 @@ txTextCursor (false);
 
             }
 
-        //подземный мир
+        //РїРѕРґР·РµРјРЅС‹Р№ РјРёСЂ
         }
         if (PAGE=="cityP")
         {
@@ -408,7 +408,7 @@ txTextCursor (false);
 
 
         }
-        //консцена
+        //РєРѕРЅСЃС†РµРЅР°
         if (PAGE=="con_1")
         {
 
@@ -427,7 +427,7 @@ txTextCursor (false);
             txSetColor(TX_BLACK);
             txSetFillColor(TX_BLACK);
             txSelectFont("Ink Free",20);
-            txTextOut(200,60,"parrot:Где я?");
+            txTextOut(200,60,"parrot:Р“РґРµ СЏ?");
             txTextOut(600,130,"Press ""E""");
 
 
@@ -458,7 +458,7 @@ txTextCursor (false);
             txSelectFont("Ink Free",20);
             txSetColor(TX_BLACK);
             txSetFillColor(TX_BLACK);
-            txTextOut(200,60,"astral ghost:Данное место называется #?/?#\\");
+            txTextOut(200,60,"astral ghost:Р”Р°РЅРЅРѕРµ РјРµСЃС‚Рѕ РЅР°Р·С‹РІР°РµС‚СЃСЏ #?/?#\\");
             txTextOut(600,130,"Press ""E""");
 
              if (GetAsyncKeyState('E'))
@@ -486,7 +486,7 @@ txTextCursor (false);
             txSelectFont("Ink Free",20);
             txSetColor(TX_BLACK);
             txSetFillColor(TX_BLACK);
-            txTextOut(200,60,"astral ghost:я не должен с тобой разговаривать");
+            txTextOut(200,60,"astral ghost:СЏ РЅРµ РґРѕР»Р¶РµРЅ СЃ С‚РѕР±РѕР№ СЂР°Р·РіРѕРІР°СЂРёРІР°С‚СЊ");
             txTextOut(600,130,"Press ""E""");
 
 
@@ -496,7 +496,7 @@ txTextCursor (false);
             txSetColor(TX_GREEN);
             txSetFillColor(TX_GREEN);
             txSelectFont("Courier New",20);
-            txTextOut(630,550,"получен новый предмет");
+            txTextOut(630,550,"РїРѕР»СѓС‡РµРЅ РЅРѕРІС‹Р№ РїСЂРµРґРјРµС‚");
 
 
              if (GetAsyncKeyState('E'))
@@ -525,7 +525,7 @@ txTextCursor (false);
             txSelectFont("Ink Free",20);
             txSetColor(TX_BLACK);
             txSetFillColor(TX_BLACK);
-            txTextOut(200,60,"astral ghost:этим я смогу тебе помогу, зови если понадаблюсь");
+            txTextOut(200,60,"astral ghost:СЌС‚РёРј СЏ СЃРјРѕРіСѓ С‚РµР±Рµ РїРѕРјРѕРіСѓ, Р·РѕРІРё РµСЃР»Рё РїРѕРЅР°РґР°Р±Р»СЋСЃСЊ");
             txTextOut(600,130,"Press ""E""");
 
 

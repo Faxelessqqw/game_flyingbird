@@ -1,19 +1,19 @@
-C:\Users\Матвей\Downloads\game_flyingbird-main (1)\game_flyingbird-main\main.cpp:158:36: warning: trigraph ??> ignored, use -trigraphs to enable [-Wtrigraphs]
+C:\Users\Матвей\Downloads\game_flyingbird-main (3)\game_flyingbird-main\main.cpp:159:36: warning: trigraph ??> ignored, use -trigraphs to enable [-Wtrigraphs]
                  txTextOut(0, 300, "??><<?/.,,><>>[][[[[[]]]]>?>><<:$%#@^&#@%$#@%^@#$%##@^$#@*&#$????");
  ^
-C:\Users\Матвей\Downloads\game_flyingbird-main (1)\game_flyingbird-main\main.cpp: In function 'int main()':
-C:\Users\Матвей\Downloads\game_flyingbird-main (1)\game_flyingbird-main\main.cpp:110:26: warning: suggest braces around empty body in an 'if' statement [-Wempty-body]
+C:\Users\Матвей\Downloads\game_flyingbird-main (3)\game_flyingbird-main\main.cpp: In function 'int main()':
+C:\Users\Матвей\Downloads\game_flyingbird-main (3)\game_flyingbird-main\main.cpp:115:26: warning: suggest braces around empty body in an 'if' statement [-Wempty-body]
          if (PAGE=="menu");
                           ^
-C:\Users\Матвей\Downloads\game_flyingbird-main (1)\game_flyingbird-main\main.cpp:349:23: warning: logical 'and' of mutually exclusive tests is always false [-Wlogical-op]
+C:\Users\Матвей\Downloads\game_flyingbird-main (3)\game_flyingbird-main\main.cpp:362:23: warning: logical 'and' of mutually exclusive tests is always false [-Wlogical-op]
              if (x<600 && x>700 && y>550)
                        ^
-C:\Users\Матвей\Downloads\game_flyingbird-main (1)\game_flyingbird-main\main.cpp:83:9: warning: unused variable 'birdAZ_1' [-Wunused-variable]
+C:\Users\Матвей\Downloads\game_flyingbird-main (3)\game_flyingbird-main\main.cpp:82:9: warning: unused variable 'birdAZ_1' [-Wunused-variable]
      HDC birdAZ_1 = txLoadImage("pictures/bird_1_zerk.bmp");
          ^
-C:\Users\Матвей\Downloads\game_flyingbird-main (1)\game_flyingbird-main\main.cpp:84:9: warning: unused variable 'birdAZ_2' [-Wunused-variable]
+C:\Users\Матвей\Downloads\game_flyingbird-main (3)\game_flyingbird-main\main.cpp:83:9: warning: unused variable 'birdAZ_2' [-Wunused-variable]
      HDC birdAZ_2 = txLoadImage("pictures/bird_2_zerk.bmp");
          ^
 ---------------------------------------------------------------------------------------------
-[10.04.2025 19:35:46,97 C:\Users\Матвей@MROMAN, returned 0]
-C:\Users\Матвей\Downloads\game_flyingbird-main (1)\game_flyingbird-main>g++.exe "C:\Users\Матвей\Downloads\game_flyingbird-main (1)\game_flyingbird-main\main.cpp" -o "C:\Users\Матвей\Downloads\game_flyingbird-main (1)\game_flyingbird-main\main.exe"  -Wall -Wextra -Weffc++ -Wcast-align -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wfloat-equal -Wformat-security -Wformat=2 -Wignored-qualifiers -Winit-self -Winline -Wlogical-op -Wmain -Wmissing-declarations -Wno-missing-field-initializers -Wmissing-include-dirs -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wredundant-decls -Wshadow -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wswitch-default -Wswitch-enum -Wtype-limits -Wundef -Wunreachable-code -Wwrite-strings -fexceptions -g -pipe -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC
+[24.04.2025 15:24:32,88 C:\Users\Матвей@MROMAN, returned 0]
+C:\Users\Матвей\Downloads\game_flyingbird-main (3)\game_flyingbird-main>g++.exe "C:\Users\Матвей\Downloads\game_flyingbird-main (3)\game_flyingbird-main\main.cpp" -o "C:\Users\Матвей\Downloads\game_flyingbird-main (3)\game_flyingbird-main\main.exe"  -Wall -Wextra -Weffc++ -Wcast-align -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wfloat-equal -Wformat-security -Wformat=2 -Wignored-qualifiers -Winit-self -Winline -Wlogical-op -Wmain -Wmissing-declarations -Wno-missing-field-initializers -Wmissing-include-dirs -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wredundant-decls -Wshadow -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wswitch-default -Wswitch-enum -Wtype-limits -Wundef -Wunreachable-code -Wwrite-strings -fexceptions -g -pipe -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC

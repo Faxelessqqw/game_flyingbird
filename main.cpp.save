@@ -89,9 +89,9 @@ txTextCursor (false);
     HDC space_2 = txLoadImage("pictures/SPACE_2.bmp");
     HDC astr_priz = txLoadImage("pictures/astr_priz.bmp");
     HDC star = txLoadImage("pictures/star.bmp");
-    
-      
-    
+
+
+
     //музка
     music=txLoadSound("music.mp3");
 

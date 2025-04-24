@@ -1,4 +1,4 @@
-#include "TXLib.h"
+#include <txlib.h>
 #include <windows.h>
 
 using namespace std;
@@ -71,7 +71,6 @@ txTextCursor (false);
 
 
 
-
     //изображения
     HDC pole = txLoadImage("pictures/location.bmp");
     HDC bat = txLoadImage("pictures/bat.bmp");
@@ -92,8 +91,8 @@ txTextCursor (false);
 
 
 
-    //музка
-    music=txLoadSound("music.mp3");
+
+
 
 
 
@@ -103,9 +102,10 @@ txTextCursor (false);
 
         txBegin();
 
+
         Button btn0 = {x_batton1, 190, x_batton11, 40, "Старт"};
         Button btn1 = {x_batton2, 310, x_batton21, 40, "Выход"};
-        Button btn2 = {x_batton3, 270, x_batton31, 40, "Предметы"};
+        Button btn2 = {x_batton3, 270, x_batton31, 40, "Об авторе"};
         Button btn3 = {x_batton4, 230, x_batton41, 40, "Правила"};
 
         txSetFillColor (TX_WHITE);
@@ -114,6 +114,10 @@ txTextCursor (false);
         //меню
         if (PAGE=="menu");
         {
+
+            txSetFillColor(TX_BLACK);
+            txSelectFont("Times New Roman", 30);
+            txTextOut(310, 50, "The flying bird");
             btn0.draw();
             btn1.draw();
             btn2.draw();
@@ -134,9 +138,10 @@ txTextCursor (false);
                 PAGE="rulers";
             }
 
+
             if (btn2.click())
             {
-                PAGE="item";
+                PAGE="avtor";
             }
             if (itapG=="astr_priz" or itapG=="nicegame1.1" or itapG=="nicegame1" or itapG=="nicegame" or itapG=="astr_world" or itapG=="astr_priz_dialog2" or itapG=="astr_priz_dialog1"){
                 if (btn3.click())
@@ -166,6 +171,18 @@ txTextCursor (false);
                 txTextOut(0, 350, "путишествиях, однако тут путишествие оказалось очень интересным");
                 txTextOut(0, 400, "Управление wasd");
             }
+        }
+
+        if (PAGE=="avtor")
+        {
+                txSetFillColor(TX_WHITE);
+                txRectangle(0,0,800,600);
+                txSetFillColor(TX_BLACK);
+                txSelectFont("Times New Roman", 30);
+                txTextOut(300, 300, "Обычный школьник");
+
+
+
         }
 
         if (GetAsyncKeyState(VK_ESCAPE))
